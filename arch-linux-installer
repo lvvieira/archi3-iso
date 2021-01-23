@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+git clone https://github.com/lvvieira/arch-linux-i3.git
+cd arch-linux-i3
+chmod +x ./archlinux-UEFI.in
+./arcinstall-UEFI.in -o 1
