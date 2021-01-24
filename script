@@ -1,0 +1,9 @@
+#!/bin/bash
+
+pacman -S archiso --noconfirm
+mkdir /home/$USER/archlive
+cp -R /usr/share/archiso/configs/releng/* /home/$USER/archlive
+cd /home/$USER/archline
+cp ./.zloging /home/$USER/archlive/airootfs/root
+cp ./arch-linux-installer /home/$USER/archlive/airootfs/etc
+
