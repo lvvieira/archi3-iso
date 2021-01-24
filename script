@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
 sudo pacman -S archiso --noconfirm
+
 [[ -d /$HOME/archlive ]] && rm -rf /$HOME/archlive && mkdir /$HOME/archlive 
 
 cp -R /usr/share/archiso/configs/releng/* /$HOME/archlive
 cp .zlogin /$HOME/archlive/airootfs/root
 cp arch-linux-installer /$HOME/archlive/airootfs/etc
+
+cd /$HOME/archlive
+
+sudo mkarchiso -v . -o . -w .
