@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-dd=$pwd
 sudo pacman -S archiso --noconfirm
 [[ -d /$HOME/archlive ]] && rm -rf /$HOME/archlive && mkdir /$HOME/archlive 
 
