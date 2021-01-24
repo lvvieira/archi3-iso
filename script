@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -S archiso --noconfirm
+sudo pacman -S archiso --noconfirm
 mkdir /home/$USER/archlive
 cp -R /usr/share/archiso/configs/releng/* /home/$USER/archlive
 cd /home/$USER/archline
