@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
+dd=$pwd
 sudo pacman -S archiso --noconfirm
-mkdir /home/$USER/archlive
-cp -R /usr/share/archiso/configs/releng/* /home/$USER/archlive
-cd /home/$USER/archline
-cp ./.zloging /home/$USER/archlive/airootfs/root
-cp ./arch-linux-installer /home/$USER/archlive/airootfs/etc
+[[ -d /$HOME/archlive ]] && rm -rf /$HOME/archlive && mkdir /$HOME/archlive 
 
+cp -R /usr/share/archiso/configs/releng/* /$HOME/archlive
+cp .zlogin /$HOME/archlive/airootfs/root
+cp arch-linux-installer /$HOME/archlive/airootfs/etc
