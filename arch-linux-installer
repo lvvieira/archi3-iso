@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-git clone https://github.com/lvvieira/arch-linux-i3.git
+echo "Prepering installation...."
+git clone https://github.com/lvvieira/arch-linux-i3.git 2> /dev/null
 cd arch-linux-i3
 chmod +x ./archlinux-UEFI.in
 ./archinstall-UEFI.in -o 1
