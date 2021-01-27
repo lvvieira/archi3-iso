@@ -2,13 +2,14 @@
 
 sudo pacman -S archiso --noconfirm
 
-[[ -d /$HOME/archlive ]] && rm -rf /$HOME/archlive && mkdir /$HOME/archlive 
+[[ -d $HOME/archlive ]] && rm -rf $HOME/archlive && mkdir $HOME/archlive 
+[[ ! -d $HOME/archlive ]] && mkdir $HOME/archlive 
 
-cp -R /usr/share/archiso/configs/releng/* /$HOME/archlive
-cp .zlogin /$HOME/archlive/airootfs/root
-cp arch-linux-installer /$HOME/archlive/airootfs/etc
-echo "git" >> /$HOME/archlive/packages.x86_64
-echo "dialog" >> /$HOME/archlive/packages.x86_64
-cd /$HOME/archlive
+cp -R /usr/share/archiso/configs/releng/* $HOME/archlive
+cp .zlogin $HOME/archlive/airootfs/root
+cp arch-linux-installer $HOME/archlive/airootfs/etc
+echo "git" >> $HOME/archlive/packages.x86_64
+echo "dialog" >> $HOME/archlive/packages.x86_64
+cd $HOME/archlive
 
 sudo mkarchiso -v . -o . -w .
