@@ -5,7 +5,6 @@ git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux-i3 &> /dev/nu
 
 if [[ ! -d /root/arch-linux-i3 ]]; then
 
-  
   for i in 1 2 3 4 5 6 7 8 9; do
   
   echo "Failed to git clone"
@@ -13,19 +12,13 @@ if [[ ! -d /root/arch-linux-i3 ]]; then
   echo "Preparing installation...."
   git clone https://github.com/lvvieira/arch-linux-i3.git &> /dev/null
   
-  [[ -d /root/arch-linux-i3 ]] && chmod +x /root/arch-linux-i3/archinstall-UEFI.in && /root/arch-linux-i3//archinstall-UEFI.in -o 1 && i=9
+  [[ -d /root/arch-linux-i3 ]] && chmod +x /root/arch-linux-i3/archinstall-UEFI.in && /root/arch-linux-i3/archinstall-UEFI.in -o 1
   
  done
  
 else
 
   chmod +x /root/arch-linux-i3/archinstall-UEFI.in
-  /root/arch-linux-i3//archinstall-UEFI.in -o 1
+  /root/arch-linux-i3/archinstall-UEFI.in -o 1
   
 fi
-
-
-rm -rf /root/arch-linux-i3
-umount -R /mnt
-read -p "You need to reboot your machine. Reboot (Y): " ans
-[[ "$ans" == "Y" ]] && reboot
