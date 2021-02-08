@@ -4,7 +4,7 @@ echo "Preparing installation...."
 git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux-i3 &> /dev/null
 
 if [[ ! -d /root/arch-linux-i3 ]]; then
-  x=0
+  x=1
   while [ $x -le 6 ]
   do
   
