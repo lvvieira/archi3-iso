@@ -14,8 +14,6 @@ if [[ ! -d /root/arch-linux ]]; then
     git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux
 
     [[ -d /root/arch-linux ]] && n=7 || echo "There may be a problem with your internet connection or with GitHub.com servers."
-    read -p "Would you like to try again? " tryagain
-    [[ "$tryagain" == "y"]] && n=0 || exit 0
   
  done
 fi
