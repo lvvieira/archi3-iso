@@ -9,6 +9,10 @@ cp -R /usr/share/archiso/configs/releng/* $HOME/archlive
 cp arch-linux-installer $HOME/archlive/airootfs/etc
 echo "chmod +x /etc/arch-linux-installer" >> $HOME/archlive/airootfs/root/.zlogin
 echo "/etc/arch-linux-installer" >> $HOME/archlive/airootfs/root/.zlogin
+echo "powerline-daemon -q" >> $HOME/archlive/airootfs/root/.zlogin
+echo "POWERLINE_BASH_CONTINUATION=1" >> $HOME/archlive/airootfs/root/.zlogin
+echo "POWERLINE_BASH_SELECT=1" >> $HOME/archlive/airootfs/root/.zlogin
+echo "echo "POWERLINE_BASH_SELECT=1" >> $HOME/archlive/airootfs/root/.zlogin" >> $HOME/archlive/airootfs/root/.zlogin
 echo "git" >> $HOME/archlive/packages.x86_64
 echo "dialog" >> $HOME/archlive/packages.x86_64
 cd $HOME/archlive
