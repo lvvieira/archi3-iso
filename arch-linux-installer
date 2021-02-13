@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 echo "Preparing installation...."
-git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux
+git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux-i3
 
-if [[ ! -d /root/arch-linux ]]; then
+if [[ ! -d /root/arch-linux-i3 ]]; then
   x=1
   while [ $x -le 6 ]
   do
@@ -11,9 +11,9 @@ if [[ ! -d /root/arch-linux ]]; then
     x=$(( $x + 1 ))
     echo "Retrying $x out of 6 ...."
     echo "Preparing installation...."
-    git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux
+    git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux-i3
 
-    [[ -d /root/arch-linux ]] && n=7 || echo "There may be a problem with your internet connection or with GitHub.com servers."
+    [[ -d /root/arch-linux-i3 ]] && n=7 || echo "There may be a problem with your internet connection or with GitHub.com servers."
   
  done
 fi
