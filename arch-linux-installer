@@ -13,7 +13,8 @@ if [[ ! -d /root/arch-linux-i3 ]]; then
     echo "Preparing installation...."
     git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux-i3
 
-    [[ -d /root/arch-linux-i3 ]] && n=7 || echo "There may be a problem with your internet connection or with GitHub.com servers."
+    [[ -d /root/arch-linux-i3 ]] && x=7
+    [[ x -eq 6 ]] && echo "There may be a problem with your internet connection or with GitHub.com servers." && echo "Run '/etc/arch-linux-installer to try again!"
   
  done
 fi
