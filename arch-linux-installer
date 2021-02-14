@@ -19,7 +19,7 @@ if [[ ! -d /root/arch-linux ]]; then
  done
 fi
 
-cd /home/arch-linux
+cd /root/arch-linux
 chmod +x /root/arch-linux/archinstall-UEFI.in
 /root/arch-linux/archinstall-UEFI.in -o 1
   
