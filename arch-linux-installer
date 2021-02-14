@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 echo "Preparing installation...."
-git clone https://github.com/lvvieira/arch-linux.git arch-linux
+net=$(ping -c 1 google.com &> /dev/null ; echo $?)
+[[ $net -eq 0 ]] && git clone https://github.com/lvvieira/arch-linux.git arch-linux
 
 if [[ ! -d /root/arch-linux ]]; then
   x=1
