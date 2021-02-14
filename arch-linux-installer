@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 echo "Preparing installation...."
-git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux-i3
+git clone https://github.com/lvvieira/arch-linux.git arch-linux
 
-if [[ ! -d /root/arch-linux-i3 ]]; then
+if [[ ! -d /root/arch-linux ]]; then
   x=1
   while [ $x -le 6 ]
   do
@@ -11,14 +11,15 @@ if [[ ! -d /root/arch-linux-i3 ]]; then
     x=$(( $x + 1 ))
     echo "Retrying $x out of 6 ...."
     echo "Preparing installation...."
-    git clone https://github.com/lvvieira/arch-linux-i3.git arch-linux-i3
+    git clone https://github.com/lvvieira/arch-linux.git arch-linux
 
-    [[ -d /root/arch-linux-i3 ]] && x=7
+    [[ -d /root/arch-linux ]] && x=7
     [[ x -eq 6 ]] && echo "There may be a problem with your internet connection or with GitHub.com servers." && echo "Run '/etc/arch-linux-installer to try again!" && exit 0
   
  done
 fi
 
-chmod +x /root/arch-linux-i3/archinstall-UEFI.in
-/root/arch-linux-i3/archinstall-UEFI.in -o 1
+cd /home/arch-linux
+chmod +x /root/arch-linux/archinstall-UEFI.in
+/root/arch-linux/archinstall-UEFI.in -o 1
   
